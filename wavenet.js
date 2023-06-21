@@ -514,7 +514,7 @@ module.exports = function (RED) {
 			let key = RED.nodes.getNode(config.key);
 			let txt = msg.payload;
 
-			let voice = getVoice( (typeof msg.voice !== 'undefined) ? msg.voice : config.voice );
+			let voice = getVoice( (typeof msg.voice !== 'undefined') ? msg.voice : config.voice );
 			voice.key = key.speech_api;
 
 			// get audio config options
